@@ -6,39 +6,30 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL featuring real-time inventory management and secure payment processing.",
+      title: "Persona Prediction Via Resume Analysis",
+      description: "ML-powered recruiting system that automates candidate selection using eligibility criteria and personality assessment through resume analysis with Logistic Regression and Random Forest Classification.",
       image: "/placeholder-project-1.jpg",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+      technologies: ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "NumPy"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/vipulnikam25/Persona-Prediction-Via-Resume-Analysis-Using-ML",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, team workspaces, and advanced analytics dashboard.",
+      title: "CSV Analysis Using Django",
+      description: "Django application for uploading CSVs, processing data, and delivering user-driven visualizations with AJAX support and advanced statistical analysis capabilities.",
       image: "/placeholder-project-2.jpg",
-      technologies: ["Next.js", "TypeScript", "Prisma", "WebSocket"],
+      technologies: ["Django", "Python", "AJAX", "Data Visualization", "Statistics"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/vipulnikam25/Django-CSV-Analysis-Project",
       featured: true
     },
     {
-      title: "AI Content Generator",
-      description: "AI-powered content creation platform with advanced NLP capabilities and customizable output formats.",
+      title: "Multi-Database CRUD Microservice",
+      description: "High-performance FastAPI-driven microservice for seamless transactions across databases with JWT authentication, role-based access control, and comprehensive testing.",
       image: "/placeholder-project-3.jpg",
-      technologies: ["Python", "FastAPI", "OpenAI", "Redis", "Docker"],
+      technologies: ["FastAPI", "Python", "JWT", "Multi-DB", "Microservices"],
       liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with location-based forecasts, interactive maps, and weather pattern analytics.",
-      image: "/placeholder-project-4.jpg",
-      technologies: ["Vue.js", "D3.js", "Express", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/vipulnikam25/Database-Connection-Microservice",
       featured: false
     }
   ];
@@ -80,10 +71,22 @@ const ProjectsSection = () => {
                 <CardTitle className="flex items-center gap-2">
                   {project.title}
                   <div className="flex gap-2 ml-auto">
-                    <Button variant="ghost" size="icon" className="hover:scale-110">
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="hover:scale-110">
+                    {project.liveUrl !== "#" && (
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="hover:scale-110"
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
+                    )}
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="hover:scale-110"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                    >
                       <Github className="h-4 w-4" />
                     </Button>
                   </div>
@@ -106,10 +109,22 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex gap-3 pt-4">
-                  <Button variant="luxury" size="sm" className="flex-1">
-                    View Live
-                  </Button>
-                  <Button variant="outline-glow" size="sm" className="flex-1">
+                  {project.liveUrl !== "#" && (
+                    <Button 
+                      variant="luxury" 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                    >
+                      View Live
+                    </Button>
+                  )}
+                  <Button 
+                    variant="outline-glow" 
+                    size="sm" 
+                    className={project.liveUrl === "#" ? "w-full" : "flex-1"}
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                  >
                     View Code
                   </Button>
                 </div>
@@ -119,8 +134,12 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline-glow" size="lg">
-            View All Projects
+          <Button 
+            variant="outline-glow" 
+            size="lg"
+            onClick={() => window.open('https://github.com/vipulnikam25', '_blank')}
+          >
+            View All Projects on GitHub
           </Button>
         </div>
       </div>

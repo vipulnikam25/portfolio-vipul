@@ -20,19 +20,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@portfolio.com",
-      href: "mailto:hello@portfolio.com"
+      value: "vipulnikam0925@gmail.com",
+      href: "mailto:vipulnikam0925@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 8208106900",
+      href: "tel:+918208106900"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Pune, Maharashtra, India",
       href: "#"
     }
   ];

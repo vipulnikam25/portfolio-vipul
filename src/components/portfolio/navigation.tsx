@@ -45,7 +45,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="text-2xl font-bold">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Portfolio
+              Vipul Nikam
             </span>
           </div>
 
@@ -61,7 +61,11 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
-            <Button variant="luxury" size="sm">
+            <Button 
+              variant="luxury" 
+              size="sm"
+              onClick={() => scrollToSection('#contact')}
+            >
               Hire Me
             </Button>
           </div>
@@ -90,7 +94,12 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <Button variant="luxury" size="sm" className="mt-4">
+              <Button 
+                variant="luxury" 
+                size="sm" 
+                className="mt-4"
+                onClick={() => scrollToSection('#contact')}
+              >
                 Hire Me
               </Button>
             </div>

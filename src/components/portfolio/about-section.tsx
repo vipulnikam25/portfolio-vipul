@@ -1,34 +1,39 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Palette, Zap, Users } from "lucide-react";
+import { Code, Database, Cloud, Zap, Eye } from "lucide-react";
+import { useVisitorCounter } from "@/hooks/use-visitor-counter";
 
 const AboutSection = () => {
+  const visitorCount = useVisitorCounter();
+  
   const highlights = [
     {
       icon: Code,
-      title: "Full-Stack Development",
-      description: "Expert in modern web technologies and frameworks"
+      title: "Backend Development",
+      description: "Expert in Python, Node.js, FastAPI and RESTful APIs"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating beautiful, intuitive user experiences"
+      icon: Database,
+      title: "Data Engineering",
+      description: "Building robust data pipelines and ETL workflows"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Platforms",
+      description: "Experience with AWS, Azure and microservices"
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Building fast, scalable applications"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Experienced in agile development environments"
+      title: "Automation & ML",
+      description: "Intelligent automation bots and machine learning solutions"
     }
   ];
 
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "PostgreSQL", 
-    "AWS", "Docker", "GraphQL", "Next.js", "Tailwind CSS"
+    "Python", "FastAPI", "Node.js", "React", "TypeScript", "SQL", "Go",
+    "Django", "LangChain", "Express.js", "MongoDB", "PostgreSQL", "MySQL",
+    "AWS", "Azure", "Docker", "Pandas", "NumPy", "Matplotlib", "Scikit-Learn",
+    "PyTorch", "TensorFlow", "Git", "VS Code", "Jupyter Notebook"
   ];
 
   return (
@@ -41,10 +46,17 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
-            I'm a passionate developer who loves turning complex problems into simple, 
-            beautiful digital solutions. With expertise across the full development stack, 
-            I create experiences that users love and businesses depend on.
+            I'm a passionate Data Engineer with over 1 year of expertise in building scalable backend systems, 
+            developing APIs, and automating data workflows. I specialize in creating intelligent solutions 
+            that solve real-world problems using cutting-edge technologies.
           </p>
+          
+          {/* Visitor Counter */}
+          <div className="flex items-center justify-center gap-2 mt-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <Eye className="h-5 w-5 text-primary" />
+            <span className="text-lg font-semibold text-primary">{visitorCount.toLocaleString()}</span>
+            <span className="text-muted-foreground">portfolio views</span>
+          </div>
         </div>
 
         {/* Highlights Grid */}

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail, Download, Phone, Facebook, Instagram } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -32,13 +32,13 @@ const HeroSection = () => {
         <div className="space-y-6">
           <h1 className="text-6xl md:text-8xl font-bold animate-slide-up">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Creative
+              Vipul
             </span>
           </h1>
           <h1 className="text-6xl md:text-8xl font-bold animate-slide-up" 
               style={{ animationDelay: '0.2s' }}>
             <span className="bg-gradient-sunset bg-clip-text text-transparent">
-              Developer
+              Nikam
             </span>
           </h1>
         </div>
@@ -46,18 +46,28 @@ const HeroSection = () => {
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted-foreground mt-8 mb-12 animate-fade-in" 
            style={{ animationDelay: '0.6s' }}>
-          Crafting digital experiences with passion, precision & innovation
+          Passionate Data Engineer building scalable backend systems & automating data workflows
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" 
              style={{ animationDelay: '0.8s' }}>
-          <Button variant="luxury" size="lg" className="group">
+          <Button 
+            variant="luxury" 
+            size="lg" 
+            className="group"
+            onClick={() => scrollToSection('projects')}
+          >
             <span className="relative z-10">View My Work</span>
             <div className="absolute inset-0 bg-gradient-primary rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Button>
           
-          <Button variant="outline-glow" size="lg" className="group">
+          <Button 
+            variant="outline-glow" 
+            size="lg" 
+            className="group"
+            onClick={() => window.open('https://drive.google.com/file/d/1Y4xqgGYHRw4kqSUXqU_CipzECtQIVVKc/view?usp=drive_link', '_blank')}
+          >
             <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
             Download Resume
           </Button>
@@ -66,14 +76,53 @@ const HeroSection = () => {
         {/* Social Links */}
         <div className="flex gap-6 justify-center mt-12 animate-fade-in" 
              style={{ animationDelay: '1.0s' }}>
-          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('https://github.com/vipulnikam25', '_blank')}
+          >
             <Github className="h-6 w-6" />
           </Button>
-          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('https://www.linkedin.com/in/vipul-nikam-b06ab8212/', '_blank')}
+          >
             <Linkedin className="h-6 w-6" />
           </Button>
-          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('mailto:vipulnikam0925@gmail.com', '_blank')}
+          >
             <Mail className="h-6 w-6" />
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('https://wa.me/918208106900', '_blank')}
+          >
+            <Phone className="h-6 w-6" />
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('https://www.facebook.com/vipul.nikam.526', '_blank')}
+          >
+            <Facebook className="h-6 w-6" />
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="hover:scale-110 transition-transform"
+            onClick={() => window.open('https://www.instagram.com/_.skipperrr._?igsh=MXd4Mnd1ZjQ5NmdnZA==', '_blank')}
+          >
+            <Instagram className="h-6 w-6" />
           </Button>
         </div>
 
