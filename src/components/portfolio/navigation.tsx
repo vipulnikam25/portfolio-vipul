@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -18,6 +19,8 @@ const Navigation = () => {
   const navItems = [
     { label: 'Home', href: '#' },
     { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -36,7 +39,7 @@ const Navigation = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/80 backdrop-blur-md shadow-elegant border-b border-white/10' 
+          ? 'bg-background/80 backdrop-blur-md shadow-elegant border-b border-border/50' 
           : 'bg-transparent'
       }`}
     >
@@ -66,7 +69,7 @@ const Navigation = () => {
               size="sm"
               onClick={() => scrollToSection('#contact')}
             >
-              Hire Me
+              Get In Touch
             </Button>
           </div>
 
@@ -83,7 +86,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-background/90 backdrop-blur-md rounded-lg border border-white/10 animate-fade-in">
+          <div className="md:hidden mt-4 py-4 bg-background/90 backdrop-blur-md rounded-lg border border-border/50 animate-fade-in">
             <div className="flex flex-col space-y-4 px-4">
               {navItems.map((item) => (
                 <button
@@ -100,7 +103,7 @@ const Navigation = () => {
                 className="mt-4"
                 onClick={() => scrollToSection('#contact')}
               >
-                Hire Me
+                Get In Touch
               </Button>
             </div>
           </div>

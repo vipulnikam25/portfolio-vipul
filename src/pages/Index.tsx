@@ -1,6 +1,9 @@
+
 import Navigation from "@/components/portfolio/navigation";
 import HeroSection from "@/components/portfolio/hero-section";
 import AboutSection from "@/components/portfolio/about-section";
+import SkillsSection from "@/components/portfolio/skills-section";
+import ExperienceSection from "@/components/portfolio/experience-section";
 import ProjectsSection from "@/components/portfolio/projects-section";
 import ContactSection from "@/components/portfolio/contact-section";
 
@@ -10,11 +13,13 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
       
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/10">
+      <footer className="py-12 px-6 border-t border-border/50">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-6">
             <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">

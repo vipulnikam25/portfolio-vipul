@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -43,60 +44,60 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
             <span className="bg-gradient-luxury bg-clip-text text-transparent">
-              Let's Work Together
+              Let's Connect
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
-            Have a project in mind? I'd love to hear about it. 
-            Let's discuss how we can bring your ideas to life.
+            I'm always interested in discussing new opportunities, collaborations, 
+            and innovative projects. Let's start a conversation.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="lg:col-span-3 bg-gradient-glass border-white/10 shadow-luxury">
+          <Card className="lg:col-span-3 bg-card/80 backdrop-blur-md border-border/50 shadow-luxury">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">First Name</label>
+                    <label className="block text-sm font-medium mb-2 text-foreground">First Name</label>
                     <Input 
                       required 
-                      className="bg-muted/50 border-white/20 focus:border-primary transition-colors" 
+                      className="bg-muted/50 border-border/50 focus:border-primary transition-colors text-foreground" 
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Last Name</label>
+                    <label className="block text-sm font-medium mb-2 text-foreground">Last Name</label>
                     <Input 
                       required 
-                      className="bg-muted/50 border-white/20 focus:border-primary transition-colors" 
+                      className="bg-muted/50 border-border/50 focus:border-primary transition-colors text-foreground" 
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Email</label>
                   <Input 
                     type="email" 
                     required 
-                    className="bg-muted/50 border-white/20 focus:border-primary transition-colors" 
+                    className="bg-muted/50 border-border/50 focus:border-primary transition-colors text-foreground" 
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Subject</label>
                   <Input 
                     required 
-                    className="bg-muted/50 border-white/20 focus:border-primary transition-colors" 
+                    className="bg-muted/50 border-border/50 focus:border-primary transition-colors text-foreground" 
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2 text-foreground">Message</label>
                   <Textarea 
                     required 
                     rows={5} 
-                    className="bg-muted/50 border-white/20 focus:border-primary transition-colors resize-none" 
+                    className="bg-muted/50 border-border/50 focus:border-primary transition-colors resize-none text-foreground" 
                   />
                 </div>
                 
@@ -114,7 +115,7 @@ const ContactSection = () => {
                     </div>
                   ) : (
                     <>
-                      Send Message
+                      Get In Touch
                       <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
@@ -128,7 +129,7 @@ const ContactSection = () => {
             {contactInfo.map((item, index) => (
               <Card 
                 key={item.label} 
-                className="group hover:shadow-glow transition-all duration-300 hover:scale-105 bg-gradient-glass border-white/10"
+                className="group hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-md border-border/50"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6">
@@ -137,7 +138,7 @@ const ContactSection = () => {
                       <item.icon className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="font-medium">{item.label}</p>
+                      <p className="font-medium text-foreground">{item.label}</p>
                       <a 
                         href={item.href} 
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -149,15 +150,6 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             ))}
-
-            {/* Availability Status */}
-            <Card className="bg-gradient-sunset border-none text-secondary-foreground">
-              <CardContent className="p-6 text-center">
-                <div className="w-3 h-3 bg-green-400 rounded-full mx-auto mb-2 animate-pulse" />
-                <p className="font-medium">Available for freelance</p>
-                <p className="text-sm opacity-90">Currently accepting new projects</p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

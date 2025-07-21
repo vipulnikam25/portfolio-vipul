@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -53,7 +54,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className={`group hover:shadow-luxury transition-all duration-500 hover:scale-[1.02] bg-gradient-glass border-white/10 overflow-hidden ${
+              className={`group hover:shadow-luxury transition-all duration-500 hover:scale-[1.02] bg-card/80 backdrop-blur-md border-border/50 overflow-hidden ${
                 project.featured ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -61,14 +62,14 @@ const ProjectsSection = () => {
               <div className="relative overflow-hidden">
                 <div className="h-48 bg-gradient-luxury opacity-20" />
                 {project.featured && (
-                  <Badge className="absolute top-4 left-4 bg-gradient-sunset text-foreground">
+                  <Badge className="absolute top-4 left-4 bg-gradient-sunset text-secondary-foreground">
                     Featured
                   </Badge>
                 )}
               </div>
               
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-foreground">
                   {project.title}
                   <div className="flex gap-2 ml-auto">
                     {project.liveUrl !== "#" && (
@@ -101,7 +102,7 @@ const ProjectsSection = () => {
                     <Badge 
                       key={tech} 
                       variant="secondary" 
-                      className="bg-gradient-glass border-white/20 hover:scale-105 transition-transform"
+                      className="bg-muted/60 border-border/30 text-foreground hover:scale-105 transition-transform"
                     >
                       {tech}
                     </Badge>
