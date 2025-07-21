@@ -6,19 +6,50 @@ import { Building, Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Data Engineer",
-      company: "Professional Experience",
-      location: "Pune, Maharashtra",
-      duration: "2023 - Present",
+      title: "Associate Data Engineer",
+      company: "Plainsurf Solutions PVT",
+      companyUrl: "https://plainsurf.ae/",
+      location: "Pune, Maharashtra, India",
+      duration: "April 2025 - Present",
       type: "Full-time",
-      description: "Specialized in building scalable backend systems, developing APIs, and automating data workflows. Created intelligent solutions using cutting-edge technologies to solve real-world problems.",
+      description: "Improved a property management platform by fixing Node.js backend issues and enhancing React.js frontend performance. Engineered a robust multi-tenant backend for project (RAK-Mustawi) using Node.js to support isolated client environments. Refactored project (PARCOMOTOR) codebase from Express.js to Fastify with TypeScript, built modular RESTful APIs, and managed databases while gaining hands-on experience with Go.",
       achievements: [
-        "Developed and maintained data pipelines using Python and FastAPI",
-        "Implemented automated ETL workflows for data processing",
-        "Built RESTful APIs for data integration and analysis",
-        "Optimized database performance and query efficiency"
+        "Improved property management platform by fixing Node.js backend issues and enhancing React.js frontend performance",
+        "Engineered robust multi-tenant backend for project (RAK-Mustawi) using Node.js to support isolated client environments",
+        "Refactored project (PARCOMOTOR) codebase from Express.js to Fastify with TypeScript, built modular RESTful APIs",
+        "Managed databases while gaining hands-on experience with Go"
       ],
-      technologies: ["Python", "FastAPI", "SQL", "ETL", "API Development"]
+      technologies: ["Node.js", "React.js", "Express.js", "Fastify", "TypeScript", "Go", "Multi-tenant Architecture"]
+    },
+    {
+      title: "Data Engineer Intern",
+      company: "Plainsurf Solutions PVT",
+      companyUrl: "https://plainsurf.ae/",
+      location: "Pune, Maharashtra, India",
+      duration: "September 2024 - March 2025",
+      type: "Internship",
+      description: "Utilized Microsoft Azure tools (Data Factory, Data Lake, Databricks, Synapse) for ETL, data cleaning, pipeline creation. Leveraged AWS services (S3, Lambda, Redshift, IAM, Athena) to perform ETL workflows, data storage, and job automation. Engineered Python-based microservice leveraging FastAPI for flawless database operations across various database tools. Built a RAG-powered chatbot with LangChain and Llama to automate task like flight booking and restaurant management. Streamlined banking workflows using Uipath, integrating KYC bots, web scraping, and data extraction tools.",
+      achievements: [
+        "Utilized Microsoft Azure tools (Data Factory, Data Lake, Databricks, Synapse) for ETL, data cleaning, pipeline creation",
+        "Leveraged AWS services (S3, Lambda, Redshift, IAM, Athena) to perform ETL workflows, data storage, and job automation",
+        "Engineered Python-based microservice leveraging FastAPI for flawless database operations across various database tools",
+        "Built RAG-powered chatbot with LangChain and Llama to automate task like flight booking and restaurant management",
+        "Streamlined banking workflows using Uipath, integrating KYC bots, web scraping, and data extraction tools"
+      ],
+      technologies: ["Azure", "AWS", "Python", "FastAPI", "LangChain", "Llama", "UiPath", "ETL", "Data Factory", "Databricks"]
+    },
+    {
+      title: "Web Development Intern",
+      company: "Code Clause",
+      location: "Remote",
+      duration: "March 2022 - April 2022",
+      type: "Internship",
+      description: "Assisted in developing and maintaining a responsive website ensuring cross-device/browser compatibility. Participated in regular code reviews and team meetings, gaining exposure to industry-standard practices and tools.",
+      achievements: [
+        "Assisted in developing and maintaining responsive website ensuring cross-device/browser compatibility",
+        "Participated in regular code reviews and team meetings, gaining exposure to industry-standard practices and tools"
+      ],
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design", "Cross-browser Compatibility"]
     }
   ];
 
@@ -49,7 +80,18 @@ const ExperienceSection = () => {
                     <h3 className="text-2xl font-bold text-foreground mb-2">{exp.title}</h3>
                     <div className="flex items-center gap-2 text-muted-foreground mb-2">
                       <Building className="h-4 w-4" />
-                      <span className="font-medium">{exp.company}</span>
+                      {exp.companyUrl ? (
+                        <a 
+                          href={exp.companyUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-medium hover:text-primary transition-colors"
+                        >
+                          {exp.company}
+                        </a>
+                      ) : (
+                        <span className="font-medium">{exp.company}</span>
+                      )}
                     </div>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">

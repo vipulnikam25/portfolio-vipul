@@ -3,13 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import personaPredictionImg from "@/assets/project-persona-prediction.jpg";
+import csvAnalysisImg from "@/assets/project-csv-analysis.jpg";
+import microserviceImg from "@/assets/project-microservice.jpg";
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "Persona Prediction Via Resume Analysis",
       description: "ML-powered recruiting system that automates candidate selection using eligibility criteria and personality assessment through resume analysis with Logistic Regression and Random Forest Classification.",
-      image: "/placeholder-project-1.jpg",
+      image: personaPredictionImg,
       technologies: ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "NumPy"],
       liveUrl: "#",
       githubUrl: "https://github.com/vipulnikam25/Persona-Prediction-Via-Resume-Analysis-Using-ML",
@@ -18,7 +21,7 @@ const ProjectsSection = () => {
     {
       title: "CSV Analysis Using Django",
       description: "Django application for uploading CSVs, processing data, and delivering user-driven visualizations with AJAX support and advanced statistical analysis capabilities.",
-      image: "/placeholder-project-2.jpg",
+      image: csvAnalysisImg,
       technologies: ["Django", "Python", "AJAX", "Data Visualization", "Statistics"],
       liveUrl: "#",
       githubUrl: "https://github.com/vipulnikam25/Django-CSV-Analysis-Project",
@@ -27,7 +30,7 @@ const ProjectsSection = () => {
     {
       title: "Multi-Database CRUD Microservice",
       description: "High-performance FastAPI-driven microservice for seamless transactions across databases with JWT authentication, role-based access control, and comprehensive testing.",
-      image: "/placeholder-project-3.jpg",
+      image: microserviceImg,
       technologies: ["FastAPI", "Python", "JWT", "Multi-DB", "Microservices"],
       liveUrl: "#",
       githubUrl: "https://github.com/vipulnikam25/Database-Connection-Microservice",
@@ -60,7 +63,11 @@ const ProjectsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden">
-                <div className="h-48 bg-gradient-luxury opacity-20" />
+                <div 
+                  className="h-48 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${project.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-luxury opacity-40" />
                 {project.featured && (
                   <Badge className="absolute top-4 left-4 bg-gradient-sunset text-secondary-foreground">
                     Featured

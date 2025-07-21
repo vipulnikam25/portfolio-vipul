@@ -44,10 +44,31 @@ const HeroSection = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-muted-foreground mt-8 mb-12 animate-fade-in" 
+        <p className="text-xl md:text-2xl text-muted-foreground mt-8 mb-4 animate-fade-in" 
            style={{ animationDelay: '0.6s' }}>
           Passionate Data Engineer building scalable backend systems & automating data workflows
         </p>
+
+        {/* Experience Metrics */}
+        <div className="flex flex-wrap justify-center gap-8 text-center mb-12 animate-fade-in" 
+             style={{ animationDelay: '0.7s' }}>
+          <div className="bg-card/60 backdrop-blur-md border border-border/30 rounded-lg px-4 py-2">
+            <span className="text-2xl font-bold text-primary">1+</span>
+            <p className="text-sm text-muted-foreground">Years Experience</p>
+          </div>
+          <div className="bg-card/60 backdrop-blur-md border border-border/30 rounded-lg px-4 py-2">
+            <span className="text-2xl font-bold text-primary">10+</span>
+            <p className="text-sm text-muted-foreground">Technologies</p>
+          </div>
+          <div className="bg-card/60 backdrop-blur-md border border-border/30 rounded-lg px-4 py-2">
+            <span className="text-2xl font-bold text-primary">5+</span>
+            <p className="text-sm text-muted-foreground">Major Projects</p>
+          </div>
+          <div className="bg-card/60 backdrop-blur-md border border-border/30 rounded-lg px-4 py-2">
+            <span className="text-2xl font-bold text-primary">3</span>
+            <p className="text-sm text-muted-foreground">Certifications</p>
+          </div>
+        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" 
